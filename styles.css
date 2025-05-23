@@ -113,96 +113,108 @@ a {
 }
 
 .menu-toggle {
-  display: none;
+  display: block;
   background: none;
   border: none;
   padding: 10px;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 1100;
+  position: fixed;
+  top: 20px;
+  left: 20px;
 }
 
 .menu-toggle span {
   display: block;
   width: 25px;
-  height: 2px;
+  height: 3px;
   background-color: white;
   margin: 5px 0;
   transition: 0.3s;
 }
 
-@media (max-width: 768px) {
-  .header-container {
-    padding: 10px 20px;
-  }
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
 
-  .logo {
-    height: 40px;
-  }
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
 
-  .logo-nome {
-    font-size: 0.9rem;
-    max-width: 150px;
-  }
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
 
-  .menu-toggle {
-    display: block;
-  }
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background-color: #004d00;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
 
+.main-nav.active {
+  left: 0;
+}
+
+.main-nav a {
+  color: #ffffff;
+  padding: 15px 25px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.main-nav a:hover {
+  background-color: #003300;
+}
+
+/* Remove media query hiding menu-toggle on desktop to show hamburger menu always */
+@media (min-width: 769px) {
   .main-nav {
     position: fixed;
     top: 0;
-    right: -100%;
-    width: 80%;
+    left: -250px;
+    width: 250px;
     height: 100vh;
     background-color: #004d00;
-    padding: 80px 20px 20px;
-    transition: 0.3s;
-    z-index: 999;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    transition: left 0.3s ease;
+    z-index: 1000;
   }
 
   .main-nav.active {
-    right: 0;
+    left: 0;
   }
 
   .main-nav a {
-    display: block;
-    padding: 15px 0;
-    font-size: 1.2rem;
-    margin: 0;
+    color: #ffffff;
+    padding: 15px 25px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
   }
 
-  .menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+  .main-nav a:hover {
+    background-color: #003300;
   }
+}
 
-  .menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
-  }
-
-  /* Ajustes adicionais para mobile */
-  .banner {
-    height: 250px;
-    margin-top: 20px;
-  }
-
-  .banner-overlay {
-    width: 90%;
-    padding: 15px;
-  }
-
-  .grid-noticias {
-    grid-template-columns: 1fr;
-  }
-
-  .section-container {
-    width: 95%;
-    padding: 0 10px;
-  }
+.banner {
+  height: 400px;
+  margin-top: 60px;
 }
 
 /* ===========================
