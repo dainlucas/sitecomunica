@@ -7,12 +7,11 @@ Site oficial do cursinho comunitário do Instituto de Ciências Agrárias (ICA) 
 ## Funcionalidades
 
 ### Sistema de Navegação
-- Menu responsivo com hamburguer para dispositivos móveis
+- Menu responsivo para dispositivos móveis
 - Navegação intuitiva por seções: Notícias, Informações, Edital e Contato
 - Suporte completo à acessibilidade com ARIA attributes
 
 ### Seções do Site
-- **Banner Principal**: Apresentação visual impactante do cursinho
 - **Sistema de Notícias**: Cards informativos com as últimas atualizações
 - **Informações**: Detalhes sobre o funcionamento do cursinho comunitário
 - **Download de Edital**: Acesso direto aos documentos oficiais em PDF
